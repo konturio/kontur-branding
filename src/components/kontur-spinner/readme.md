@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property | Attribute | Description     | Type     | Default     |
-| -------- | --------- | --------------- | -------- | ----------- |
-| `first`  | `first`   | The first name  | `string` | `undefined` |
-| `last`   | `last`    | The last name   | `string` | `undefined` |
-| `middle` | `middle`  | The middle name | `string` | `undefined` |
+| Property | Attribute | Description     | Type     | Default    |
+| -------- | --------- | --------------- | -------- | ---------- |
+| `dashes` | `dashes`  | Dashes pattern  | `string` | `'130 56'` |
+| `frame`  | `frame`   | Animation frame | `string` | `'0'`      |
+| `speed`  | `speed`   | Animation speed | `number` | `5`        |
 
 
 ----------------------------------------------
