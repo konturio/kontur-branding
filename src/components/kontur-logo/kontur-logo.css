@@ -1,0 +1,9 @@
+:host {
+  display: inline-block;
+}
+
+:host a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

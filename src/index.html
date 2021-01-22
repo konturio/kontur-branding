@@ -1,14 +1,82 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
 
-    <script type="module" src="/build/kontur-spinner.esm.js"></script>
-    <script nomodule src="/build/kontur-spinner.js"></script>
-  </head>
-  <body>
-    <kontur-spinner frame="0"></kontur-spinner>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/kontur-spinner.esm.js"></script>
+  <script nomodule src="/build/kontur-spinner.js"></script>
+  <style>
+    html,
+    body {
+      background-color: #dbdbdb;
+    }
+
+    .small {
+      height: 50px;
+    }
+
+    .big {
+      height: 200px;
+    }
+
+    .grid {
+      display: grid;
+      grid-gap: 32px;
+      grid-template-columns: repeat(auto-fill, 350px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid">
+    <div>
+      <kontur-spinner frame="0"></kontur-spinner>
+      <h4>Spinner</h4>
+    </div>
+    <div>
+      <kontur-logo compact="true"></kontur-logo>
+      <h4>Compact default</h4>
+    </div>
+    <div>
+      <kontur-logo palette="colorful" compact="true"></kontur-logo>
+      <h4>Compact colorful</h4>
+    </div>
+    <div>
+      <kontur-logo palette="dark" compact="true"></kontur-logo>
+      <h4>Compact dark</h4>
+    </div>
+    <div>
+      <kontur-logo palette="light" compact="true"></kontur-logo>
+      <h4>Compact light</h4>
+    </div>
+    <div>
+      <kontur-logo palette="contrast" compact="true"></kontur-logo>
+      <h4>Compact contrast</h4>
+    </div>
+    <div>
+      <kontur-logo palette="colorful"></kontur-logo>
+      <h4>Full Colorful</h4>
+    </div>
+    <div>
+      <kontur-logo palette="dark"></kontur-logo>
+      <h4>Full Dark</h4>
+    </div>
+    <div>
+      <kontur-logo palette="light"></kontur-logo>
+      <h4>Full Light</h4>
+    </div>
+    <div>
+      <kontur-logo palette="contrast"></kontur-logo>
+      <h4>Full Contrast</h4>
+    </div>
+    <div>
+      <kontur-logo></kontur-logo>
+      <h4>Default</h4>
+    </div>
+  </div>
+</body>
+
 </html>

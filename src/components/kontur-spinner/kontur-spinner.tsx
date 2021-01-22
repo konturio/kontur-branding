@@ -2,7 +2,7 @@ import { Component, Prop, State, h } from '@stencil/core';
 
 @Component({
   tag: 'kontur-spinner',
-  styleUrl: 'style.css',
+  styleUrl: 'kontur-spinner.css',
   shadow: true,
 })
 export class Spinner {
@@ -20,6 +20,11 @@ export class Spinner {
    */
   @Prop() speed: number = 5;
   
+  /**
+   * Animation size
+   */
+  @Prop() size: number = 50;
+
   @State() dashOffset = 0;
 
   private maxOffset: number = 185;
@@ -44,8 +49,8 @@ export class Spinner {
 
   render() {
     return <svg
-      width="100"
-      height="100"
+      width={this.size}
+      height={this.size}
       viewBox="0 0 100 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

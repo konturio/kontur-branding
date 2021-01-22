@@ -6,6 +6,14 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface KonturLogo {
+        /**
+          * Full size logo or compact
+         */
+        "compact": boolean;
+        "height": number;
+        "palette": 'colorful' | 'dark' | 'light' | 'contrast';
+    }
     interface KonturSpinner {
         /**
           * Dashes pattern
@@ -16,12 +24,22 @@ export namespace Components {
          */
         "frame": string;
         /**
+          * Animation size
+         */
+        "size": number;
+        /**
           * Animation speed
          */
         "speed": number;
     }
 }
 declare global {
+    interface HTMLKonturLogoElement extends Components.KonturLogo, HTMLStencilElement {
+    }
+    var HTMLKonturLogoElement: {
+        prototype: HTMLKonturLogoElement;
+        new (): HTMLKonturLogoElement;
+    };
     interface HTMLKonturSpinnerElement extends Components.KonturSpinner, HTMLStencilElement {
     }
     var HTMLKonturSpinnerElement: {
@@ -29,10 +47,19 @@ declare global {
         new (): HTMLKonturSpinnerElement;
     };
     interface HTMLElementTagNameMap {
+        "kontur-logo": HTMLKonturLogoElement;
         "kontur-spinner": HTMLKonturSpinnerElement;
     }
 }
 declare namespace LocalJSX {
+    interface KonturLogo {
+        /**
+          * Full size logo or compact
+         */
+        "compact"?: boolean;
+        "height"?: number;
+        "palette"?: 'colorful' | 'dark' | 'light' | 'contrast';
+    }
     interface KonturSpinner {
         /**
           * Dashes pattern
@@ -43,11 +70,16 @@ declare namespace LocalJSX {
          */
         "frame"?: string;
         /**
+          * Animation size
+         */
+        "size"?: number;
+        /**
           * Animation speed
          */
         "speed"?: number;
     }
     interface IntrinsicElements {
+        "kontur-logo": KonturLogo;
         "kontur-spinner": KonturSpinner;
     }
 }
@@ -55,6 +87,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "kontur-logo": LocalJSX.KonturLogo & JSXBase.HTMLAttributes<HTMLKonturLogoElement>;
             "kontur-spinner": LocalJSX.KonturSpinner & JSXBase.HTMLAttributes<HTMLKonturSpinnerElement>;
         }
     }
