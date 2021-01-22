@@ -11,6 +11,7 @@
 | -------- | --------- | --------------- | -------- | ---------- |
 | `dashes` | `dashes`  | Dashes pattern  | `string` | `'130 56'` |
 | `frame`  | `frame`   | Animation frame | `string` | `'0'`      |
+| `size`   | `size`    | Animation size  | `number` | `50`       |
 | `speed`  | `speed`   | Animation speed | `number` | `5`        |
 
 
