@@ -1,7 +1,8 @@
 {
-  "name": "kontur-branding",
+  "name": "@konturio/kontur-branding",
   "version": "1.0.0",
   "description": "Stencil Component Starter",
+  "author": "Kontur <hello@kontur.io>",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
   "es2015": "dist/esm/index.mjs",
