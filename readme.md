@@ -3,8 +3,8 @@
 # Kontur Branding
 
 This repo contain universal components for branding Kontur products:
-- <kontur-logo></kontur-logo>
-- <kontur-spinner></kontur-spinner>
+- `<kontur-logo></kontur-logo>` [(docs)](https://github.com/konturio/kontur-branding/tree/main/src/components/kontur-logo)
+- `<kontur-spinner></kontur-spinner>`[(docs)](https://github.com/konturio/kontur-branding/tree/main/src/components/kontur-spinner)
 
 # Based on Stencil
 
@@ -16,33 +16,23 @@ Stencil generates 100% standards-based Web Components that run in any browser su
 ## How to use this components
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/my-component@0.0.1/dist/my-component.esm.js'></script>` in the head of your index.html
-- Then you can use the element anywhere in your template, JSX, html etc
+- Put a script tag in the head of your index.html similar to this `<script src='https://unpkg.com/@konturio/kontur-branding/dist/component_name@1.0.0/component_name.esm.js'></script>`, where `component_name` must be replaced with name of component from [list above](#kontur-branding) (you can omit the version (@1.0.0) if you want to always use the latest version).
+- Then you can use the element anywhere in your template, JSX, HTML etc
 
 ### React, Vue, Angular or Ember App
-- Run `npm install my-component --save`
+- Run `npm install @konturio/kontur-branding --save`
 - Go to this [instruction](https://stenciljs.com/docs/overview) and select framework from list
 
 ### Any other app (universal method)
-- Run `npm install my-component --save`
-- Put a script tag similar to this `<script src='node_modules/my-component/dist/my-component.esm.js'></script>` in the head of your index.html
+- Run `npm install @konturio/kontur-branding --save`
+- Put a script tag in the head of your index.html similar to this `<script src='node_modules/@konturio/kontur-branding/dist/component_name.esm.js'></script>` where `component_name` must be replaced with name of component from [list above](#kontur-branding) 
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### In a stencil-starter app
-- Run `npm install my-component --save`
-- Add an import to the npm packages `import my-component;`
+- Run `npm install @konturio/kontur-branding --save`
+- Add an import to the npm packages `import '@konturio/kontur-branding'`
 - Then you can use the element anywhere in your template, JSX, html etc
 
-
-Install
-```bash
-npm i @konturio/kontur-branding
-```
-
-Import in code
-```js
-import branding from '@konturio/kontur-branding';
-```
 
 ## How to develop
 
