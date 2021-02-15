@@ -2,17 +2,49 @@
 
 # Kontur Branding
 
-This repo contain universal components for branding Kontur products
+This repo contain universal components for branding Kontur products:
+- <kontur-logo></kontur-logo>
+- <kontur-spinner></kontur-spinner>
 
-# Stencil
+# Based on Stencil
 
 Stencil is a compiler for building fast web apps using Web Components.
 
-Stencil combines the best concepts of the most popular frontend frameworks into a compile-time rather than run-time tool.  Stencil takes TypeScript, JSX, a tiny virtual DOM layer, efficient one-way data binding, an asynchronous rendering pipeline (similar to React Fiber), and lazy-loading out of the box, and generates 100% standards-based Web Components that run in any browser supporting the Custom Elements v1 spec.
+Stencil combines the best concepts of the most popular frontend frameworks into a compile-time rather than run-time tool.  
+Stencil generates 100% standards-based Web Components that run in any browser supporting the Custom Elements v1 spec, so they work in any major framework or with no framework at all.
 
-Stencil components are just Web Components, so they work in any major framework or with no framework at all.
+## How to use this components
+### Script tag
 
-## Getting Started
+- Put a script tag similar to this `<script src='https://unpkg.com/my-component@0.0.1/dist/my-component.esm.js'></script>` in the head of your index.html
+- Then you can use the element anywhere in your template, JSX, html etc
+
+### React, Vue, Angular or Ember App
+- Run `npm install my-component --save`
+- Go to this [instruction](https://stenciljs.com/docs/overview) and select framework from list
+
+### Any other app (universal method)
+- Run `npm install my-component --save`
+- Put a script tag similar to this `<script src='node_modules/my-component/dist/my-component.esm.js'></script>` in the head of your index.html
+- Then you can use the element anywhere in your template, JSX, html etc
+
+### In a stencil-starter app
+- Run `npm install my-component --save`
+- Add an import to the npm packages `import my-component;`
+- Then you can use the element anywhere in your template, JSX, html etc
+
+
+Install
+```bash
+npm i @konturio/kontur-branding
+```
+
+Import in code
+```js
+import branding from '@konturio/kontur-branding';
+```
+
+## How to develop
 
 To start run:
 
@@ -38,34 +70,6 @@ To create new one component run
 npm generate
 ```
 
-Need help? Check out our docs [here](https://stenciljs.com/docs/my-first-component).
-
-
 ## Naming Components
 
 When creating new component tags, use `kontur` in the component name (ex: `<kontur-logo>`)
-
-## Using this component
-
-There are three strategies we recommend for using web components built with Stencil.
-
-The first step for all three of these strategies is to [publish to NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages).
-
-### Script tag
-
-- Put a script tag similar to this `<script src='https://unpkg.com/my-component@0.0.1/dist/my-component.esm.js'></script>` in the head of your index.html
-- Then you can use the element anywhere in your template, JSX, html etc
-
-### React, Vue, Angular or Ember App
-- Run `npm install my-component --save`
-- Go to this [instruction](https://stenciljs.com/docs/overview) and select framework from list
-
-### Any other app (universal method)
-- Run `npm install my-component --save`
-- Put a script tag similar to this `<script src='node_modules/my-component/dist/my-component.esm.js'></script>` in the head of your index.html
-- Then you can use the element anywhere in your template, JSX, html etc
-
-### In a stencil-starter app
-- Run `npm install my-component --save`
-- Add an import to the npm packages `import my-component;`
-- Then you can use the element anywhere in your template, JSX, html etc
